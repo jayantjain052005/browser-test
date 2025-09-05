@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Browser Stress Test</title>
-  </head>
+<!DOCTYPE html><html>
   <body>
-    <h1>Safe Browser Stress Test</h1>
-    <p>This page demonstrates heavy CPU usage safely.</p>
-    <button id="start">Start Loop</button>
-    <button id="stop">Stop Loop</button>
-
     <script>
-      let loopRunning = false;
-
-      document.getElementById("start").onclick = function() {
-        loopRunning = true;
-        let i = 0;
-        function loop() {
-          if(!loopRunning) return;
-          i++;
-          console.log("Looping " + i);
-          if(i % 1000 === 0) console.log("Still running…");
-          requestAnimationFrame(loop);
-        }
-        loop();
-      };
-
-      document.getElementById("stop").onclick = function() {
-        loopRunning = false;
-        console.log("Loop stopped safely.");
-      };
+      while(true){
+        console.log("hihihi");
+      }
     </script>
   </body>
 </html>
